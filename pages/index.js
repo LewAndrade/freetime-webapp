@@ -87,7 +87,7 @@ export default function Home({ activities }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/activities`);
 
   const activities = await res.json();
