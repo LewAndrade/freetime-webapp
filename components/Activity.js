@@ -13,7 +13,9 @@ const Activity = ({ action, name }) => {
       case "Play":
         return (
           <>
-            <h1 className={styles.text}>now it's time to play a bit of</h1>
+            <h1 className={styles.text}>
+              now it`&apos;`s time to play a bit of
+            </h1>
             <h1 className={styles.accent}>{name}</h1>
           </>
         );
@@ -48,14 +50,16 @@ const Activity = ({ action, name }) => {
       case "FETCHING":
         return (
           <>
-            <h1 className={styles.text}>asking notion what you'll do</h1>
+            <h1 className={styles.text}>asking notion what you`&apos;`ll do</h1>
             <h1 className={styles.text}>{name}</h1>
           </>
         );
       case "IDLE":
         return (
           <>
-            <h1 className={styles.text}>so you've got some freetime huh?</h1>
+            <h1 className={styles.text}>
+              so you`&apos;`ve got some freetime huh?
+            </h1>
             <h1 className={styles.accent}>{name}</h1>
           </>
         );
