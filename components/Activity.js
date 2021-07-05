@@ -70,7 +70,7 @@ const Activity = ({ action, name }) => {
           </>
         );
       default:
-        return <h1 className={styles.text}>wanna do something?</h1>;
+        return <h1 className={styles.text}>wanna see what you&apos;do?</h1>;
     }
   };
   return <>{mountText(action, name)}</>;
