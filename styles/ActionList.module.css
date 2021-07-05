@@ -1,0 +1,64 @@
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action {
+  display: grid;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  color: #f8f8f2;
+  margin-bottom: 35px;
+}
+
+.togglecontrol {
+  display: block;
+  position: relative;
+  padding-left: 100px;
+  margin: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.togglecontrol input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.togglecontrol input:checked ~ .control {
+  background-color: #bd93f9;
+}
+.togglecontrol input:checked ~ .control:after {
+  left: 55px;
+}
+.togglecontrol .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  background-color: #44475a;
+  transition: background-color 0.15s ease-in;
+}
+.togglecontrol .control:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background: #f8f8f2;
+  transition: left 0.15s ease-in;
+}
