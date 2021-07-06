@@ -50,12 +50,12 @@ export default function Home({ activities }) {
     if (diffActivities) {
       setActivity({ name: "please wait :)", action: "FETCHING" });
       const response = await fetchActivities(actions);
-      if (!response.length > 0) {
+      if (!response.length) {
         setActivity({ name: "try changing the categorires?", action: "EMPTY" });
       } else {
         setActivitiesList(response);
         setDiffActivities(false);
-        setActivity(getRandomActivity(activitiesList));
+        setActivity(getRandomActivity(response));
       }
     } else setActivity(getRandomActivity(activitiesList));
   };
